@@ -188,5 +188,3 @@ visualizer = dict(
                                       dict(type='WandbVisBackend')],
                     name='visualizer',
                         _scope_='mmdet')
-
-
