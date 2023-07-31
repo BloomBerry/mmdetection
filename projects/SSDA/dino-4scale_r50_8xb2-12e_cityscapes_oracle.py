@@ -129,17 +129,17 @@ train_pipeline = [
 train_dataloader = dict(batch_size=batch_size,
                         dataset=dict(dataset=dict(
                             ann_file='annotations/instancesonly_filtered_gtFine_foggy_beta0.02_train.json',
-                            data_prefix=dict(img='leftImg8bit_trainvaltest/leftImg8bit/train/'))
+                            data_prefix=dict(img='leftImg8bit_foggy/train/'))
                         ))
 
 val_dataloader = dict(batch_size=1,
                         dataset=dict(
                             ann_file='annotations/instancesonly_filtered_gtFine_foggy_beta0.02_val.json',
-                            data_prefix=dict(img='leftImg8bit_trainvaltest/leftImg8bit/val/'))
+                            data_prefix=dict(img='leftImg8bit_foggy/val/'))
                         )
 
 val_evaluator = dict(
-    ann_file='annotations/instancesonly_filtered_gtFine_foggy_beta0.02_val.json'
+    ann_file='data/cityscapes/annotations/instancesonly_filtered_gtFine_foggy_beta0.02_val.json'
 )
 # gloo - multi-gpu
 env_cfg = dict(dist_cfg=dict(backend='gloo'))
